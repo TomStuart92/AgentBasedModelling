@@ -44,6 +44,13 @@ this.server = http.createServer(function(req, res) {
       res.end();
     });
   }
+  else if (req.url === '/lib/interface.js') {
+    fs.readFile('./lib/interface.js', function (err, txt) {
+      res.writeHead(200, {'Content-Type': 'application/javascript'});
+      res.write(txt);
+      res.end();
+    });
+  }
   else {
     res.writeHead(404);
     res.end();
