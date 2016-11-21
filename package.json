@@ -1,17 +1,21 @@
 {
   "name": "agentmodelling",
   "version": "1.0.0",
-  "description": "Agent Based Modelling Technical Test",
-  "main": "index.js",
+  "description": "Agent Modelling Techincal Test",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "jasmine spec"
+    "test": "open spec/specrunner.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TomStuart92/AgentBasedModelling.git"
   },
   "keywords": [
-    "AgentBased",
+    "Agent",
+    "Modelling",
     "Javascript"
   ],
   "author": "Tom Stuart",
@@ -19,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/TomStuart92/AgentBasedModelling/issues"
   },
-  "homepage": "https://github.com/TomStuart92/AgentBasedModelling#readme",
-  "dependencies": {
-    "jasmine": "^2.5.2"
-  }
+  "homepage": "https://github.com/TomStuart92/AgentBasedModelling#readme"
 }
