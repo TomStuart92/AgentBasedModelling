@@ -7,7 +7,7 @@ describe("AgentManager", function() {
 
   beforeEach(function() {
     agentManager = new AgentManager();
-    agent = { tick: function(value) {}, currentBreed: function(){ return 'Breed_C'}};
+    agent = { tick: function(value) {}, statusUpdate: function(){ return 'Breed_C'}};
     spyOn(agent, 'tick');
   })
 
