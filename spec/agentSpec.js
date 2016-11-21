@@ -81,7 +81,7 @@ describe("Agent", function() {
         })
 
         it("switches to breed C if low affinity", function() {
-          agent._agentBreed = switchedBreed;
+          agent._agentBreedg = switchedBreed;
           spyOn(agent, "_affinity").and.returnValue(0);
           agent.tick(brandFactor);
           expect(agent.currentBreed()).toEqual(originalBreed);
