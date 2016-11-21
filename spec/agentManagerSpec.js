@@ -3,7 +3,7 @@
 describe("AgentManager", function() {
   var agentManager;
   var agent;
-  var breedFactor = 1.5;
+  var brandFactor = 1.5;
 
   beforeEach(function() {
     agentManager = new AgentManager();
@@ -16,15 +16,15 @@ describe("AgentManager", function() {
     expect(agentManager._agents).toContain(agent);
   })
 
-  it('sets breedFactor',function(){
-    agentManager.setBreedFactor(breedFactor);
-    expect(agentManager._breedFactor).toEqual(breedFactor);
+  it('sets brandFactor',function(){
+    agentManager.setBrandFactor(brandFactor);
+    expect(agentManager._brandFactor).toEqual(brandFactor);
   })
 
   describe('#tick',function(){
     beforeEach(function() {
       agentManager.addAgent(agent);
-      agentManager.setBreedFactor(breedFactor);
+      agentManager.setBrandFactor(brandFactor);
       agentManager.tick()
     });
 

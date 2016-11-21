@@ -1,7 +1,10 @@
-Attached you will find an Excel file with data fields, some equations, and program/model flow. The goal here is show how you handle the data, setup the codebase, the values you get, how you output the data, and finally documentation. We look forward to receiving the completed test by Monday morning. You must provide your code to a public repo so that John may then access and view. Again you may use whatever resource, programming framework or language you like; however John should be able to download your code and be able to test it ~30 mins so please refrain from complicated/niche dev environments.
+# README
 
-The test itself can be brute-force answered in 15-45 minutes, but what we are really looking for is an understanding of creating a simulation code environment, being able to work with data and equations and translate that into code and input, how complex or reusable your output or possibly visualization is, how well documented your code or instructions are, and finally how robust and extendable your code is. The test truly allows for a lot of creativity, and there’s no way to do every part perfectly, but it lets us see your strengths and weaknesses, and above all how you approach and resolve the problem.
+## Introduction
 
+This project creates a simple agent based model of product affinity. Based on an Input Brand Factor, it iterates through a unique population to show movements between two cohorts. The rules that govern this iteration are below:
+
+```
 Brand_Factor		
 INPUT - Range (0.1 -> 2.9)		
 
@@ -17,3 +20,16 @@ Output:	Agents in each Breed
 	Breed_C Lost (Switched to Breed_NC)
 	Breed_C Gained (Switch from Breed_NC)
 	Breed_C Regained (Switched to NC, then back to C)
+```
+
+## Installation instructions
+
+To install this project to your local machine:
+- Fork and Clone to your local machine.     
+- Install [Node](https://nodejs.org/en/download/) and [NPM](http://blog.npmjs.org/post/85484771375/how-to-install-npm).    
+- Run `npm start` to start local server. This is found at `localhost:4000` by default.    
+- Run `npm test` to run the test suite.    
+
+## Approach To Solution
+
+## Further Improvements
