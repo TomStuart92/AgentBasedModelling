@@ -51,6 +51,13 @@ this.server = http.createServer(function(req, res) {
       res.end();
     });
   }
+  else if (req.url === '/assets/css/main.css') {
+    fs.readFile('./assets/css/main.css', function (err, css) {
+      res.writeHead(200, {'Content-Type': 'text/css'});
+      res.write(css);
+      res.end();
+    });
+  }
   else {
     res.writeHead(404);
     res.end();
