@@ -32,4 +32,15 @@ To install this project to your local machine:
 
 ## Approach To Solution
 
+To allow for an easy transition from simulation to visualisation, I have used pure Javascript to build the simulation, jQuery and GoogleCharts for the visualisation and Node to provide a local server host. Javascript is quick enough to handle bulk calculation as needed.
+
+The simulation is built on top of the factory and iterator design patterns. The raw csv data is read into the AgentFactory class, and used to create an instance of an agent for each data point.
+
+Each of these is aggregated in the AgentManager class, which is responsible for tracking the general state of the population and incrementing each age on a year by year basis. The actual year to year renewals are delegated to each Agent instance to respect encapsulation. As we delegate this check to the instance of the class, we can update our population in O(n) time.
+
+On each
+
+Given the relative ease of the calculations all calculations take place in the clients Browser,.
+
+
 ## Further Improvements
