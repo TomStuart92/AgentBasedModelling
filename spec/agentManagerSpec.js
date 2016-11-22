@@ -7,25 +7,25 @@ describe("AgentManager", function() {
 
   beforeEach(function() {
     agentManager = new AgentManager();
-    agent = { tick: function(value) {}, statusUpdate: function(){ return 'Breed_C'}};
+    agent = { tick: function(value) {}, statusUpdate: function(){ return 'Breed_C';}};
     spyOn(agent, 'tick');
-  })
+  });
 
   it('adds agents to memory',function(){
     agentManager.addAgent(agent);
     expect(agentManager._agents).toContain(agent);
-  })
+  });
 
   it('sets brandFactor',function(){
     agentManager.setBrandFactor(brandFactor);
     expect(agentManager._brandFactor).toEqual(brandFactor);
-  })
+  });
 
   describe('#tick',function(){
     beforeEach(function() {
       agentManager.addAgent(agent);
       agentManager.setBrandFactor(brandFactor);
-      agentManager.tick()
+      agentManager.tick();
     });
 
     it('increses year by one',function(){
@@ -33,14 +33,12 @@ describe("AgentManager", function() {
       agentManager.tick();
       var newYear = agentManager._year;
       expect(newYear).toEqual(currentYear + 1);
-    })
+    });
     it('iterates #tick method over agents array',function(){
       expect(agent.tick).toHaveBeenCalled();
-    }),
+    });
     it('records current state', function(){
-      expect(agentManager._currentRun).toEqual({ 1: { Breed_C: 1 }})
-    })
-  })
-
-
+      expect(agentManager._currentRun).toEqual({ 1: { Breed_C: 1 }});
+    });
+  });
 });

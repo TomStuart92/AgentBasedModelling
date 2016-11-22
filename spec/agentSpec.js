@@ -18,7 +18,7 @@ describe("Agent", function() {
 
   beforeEach(function() {
     agent = new Agent(agentDetails);
-  })
+  });
 
   describe("agent has attributes", function() {
     it("attributes are set on initialization", function() {
@@ -31,22 +31,22 @@ describe("Agent", function() {
                           Attribute_Price: agent._attributePrice,
                           Attribute_Promotions: agent._attributePromotions,
                           Auto_Renew: agent._autoRenew,
-                          Inertia_for_Switch: agent._switchInertia}
+                          Inertia_for_Switch: agent._switchInertia};
       expect(attributes).toEqual(agentDetails);
-    })
+    });
   });
 
   describe("#tick:", function() {
     it("increments age by one year", function() {
       agent.tick(brandFactor);
       expect(agent._age).toEqual(agentDetails.Age + 1);
-    })
+    });
     describe("checking agentBreed:",function(){
       it("has the same agentBreed if autoRenew is true", function() {
         agent._autoRenew = 1;
         agent.tick(brandFactor);
         expect(agent.statusUpdate()).toEqual('Remains: Breed_C');
-      })
+      });
       it("calculates Affinity if autoRenew is false", function() {
         var PayAtPur = agentDetails.Payment_at_Purchase;
         var AttrPrice = agentDetails.Attribute_Price;
@@ -54,20 +54,20 @@ describe("Agent", function() {
         var Inertia = agentDetails.Inertia_for_Switch;
         var affinity = PayAtPur / AttrPrice + (2 * AttrProm * Inertia);
 
-        expect(agent._affinity()).toEqual(affinity)
-      })
+        expect(agent._affinity()).toEqual(affinity);
+      });
 
       describe("checking breed C to NC transition:", function(){
         it("keeps breed C if high affinity", function() {
           spyOn(agent, "_affinity").and.returnValue(1000);
           agent.tick(brandFactor);
           expect(agent.statusUpdate()).toEqual('Remains: Breed_C');
-        })
+        });
         it("switches to breed NC if low affinity", function() {
           spyOn(agent, "_affinity").and.returnValue(0);
           agent.tick(brandFactor);
           expect(agent.statusUpdate()).toEqual('Becomes: Breed_NC');
-        })
+        });
       });
 
       describe("checking breed NC to C transition:", function(){
@@ -76,14 +76,14 @@ describe("Agent", function() {
           spyOn(agent, "_affinity").and.returnValue(1000);
           agent.tick(brandFactor);
           expect(agent.statusUpdate()).toEqual('Remains: Breed_NC');
-        })
+        });
 
         it("switches to breed C if low affinity", function() {
           agent._agentBreed = switchedBreed;
           spyOn(agent, "_affinity").and.returnValue(0);
           agent.tick(brandFactor);
           expect(agent.statusUpdate()).toEqual('Becomes: Breed_C');
-        })
+        });
       });
     });
   });
