@@ -36,19 +36,19 @@ To install this project to your local machine:
 
 The model takes a single parameter, the Brand Factor which can be inputted at the top of the page.   
 
-![alt text](https://www.dropbox.com/s/7oabtahpmsk5v4s/model_input.png?dl=0)
+![alt text](https://dl.dropboxusercontent.com/content_link/sDRIDjWY8D3edmKqYDnuMMZE6p8grOzOty5lpwDOuAVujJvDYG2iDH0KgHNf2vXU/file)
 
 Once this is inputted the model can either be iterated through on a year by year basis:
 
-![alt text](https://www.dropbox.com/s/c7l5ik5vzn46nle/model_single.png?dl=0)
+![alt text](https://dl.dropboxusercontent.com/content_link/VANY4zDDPDAhYIU3heOgLMN34NMMaXxzZqqRqADBIyn6S228ypiUlBrGYJxiNNbP/file)
 
 Or run for the full 15 year length:
 
-![alt text](https://www.dropbox.com/s/iih1iifoe9eq4rp/model_run.png?dl=0)
+![alt text](https://dl.dropboxusercontent.com/content_link/4iqf6hxkIDjJo1DRSyM1fTlsmCrsEJSQqmKaUTjOnc2Nb1gLGmZkoP0BalEPY2xy/file)
 
 Once the model has been run, it can be reset by simply pressing the reset button:
 
-![alt text](https://www.dropbox.com/s/sn3tejjxbwrmb0l/model_reset.png?dl=0)
+![alt text](https://dl.dropboxusercontent.com/content_link/d0JWw2tNUPFMQeZWTr77v9TRzJCTOYWD6vZ4OJHaGqYo6xZGNV19Ft4qhajLfLcH/file)
 
 ## Approach To Solution
 
