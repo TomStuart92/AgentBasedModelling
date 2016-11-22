@@ -16,6 +16,13 @@ this.server = http.createServer(function(req, res) {
       res.end();
     });
   }
+  else if (req.url === '/testData') {
+    fs.readFile('./data/testData.csv', function (err, txt) {
+      res.writeHead(200, {'Content-Type': 'text'});
+      res.write(txt);
+      res.end();
+    });
+  }
   else if (req.url === '/lib/jquery-csv.js') {
     fs.readFile('./lib/jquery-csv.js', function (err, txt) {
       res.writeHead(200, {'Content-Type': 'application/javascript'});

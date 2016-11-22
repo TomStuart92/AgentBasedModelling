@@ -27,9 +27,28 @@ Output:	Agents in each Breed
 To install this project to your local machine:
 - Fork and Clone to your local machine.     
 - Install [Node](https://nodejs.org/en/download/) and [NPM](http://blog.npmjs.org/post/85484771375/how-to-install-npm).    
+- Run `npm install` to install dependencies.   
 - Run `npm start` to start local server.     
 - Go to `localhost:4000` in your browser to find the simulation.       
-- Run `npm test` to run the test suite.    
+- Run `npm test` to run the test suite.  
+
+## Usage Instructions
+
+The model takes a single parameter, the Brand Factor which can be inputted at the top of the page.   
+
+![alt text](https://www.dropbox.com/s/7oabtahpmsk5v4s/model_input.png?dl=0)
+
+Once this is inputted the model can either be iterated through on a year by year basis:
+
+![alt text](https://www.dropbox.com/s/c7l5ik5vzn46nle/model_single.png?dl=0)
+
+Or run for the full 15 year length:
+
+![alt text](https://www.dropbox.com/s/iih1iifoe9eq4rp/model_run.png?dl=0)
+
+Once the model has been run, it can be reset by simply pressing the reset button:
+
+![alt text](https://www.dropbox.com/s/sn3tejjxbwrmb0l/model_reset.png?dl=0)
 
 ## Approach To Solution
 

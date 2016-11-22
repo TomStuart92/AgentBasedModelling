@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/TomStuart92/AgentBasedModelling/issues"
   },
-  "homepage": "https://github.com/TomStuart92/AgentBasedModelling#readme"
+  "homepage": "https://github.com/TomStuart92/AgentBasedModelling#readme",
+  "dependencies": {
+    "jasmine": "^2.5.2",
+    "zombie": "^5.0.4"
+  }
 }
